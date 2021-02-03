@@ -7,7 +7,7 @@ import (
 
 type testConfig struct {
 	Port    string `env:"PORT" envDefault:"3002" validate:"numeric"`
-	GinMode string `env:"GIN_MODE" envDefault:"debug" validate:"oneof=debug release`
+	GinMode string `env:"GIN_MODE" envDefault:"debug" validate:"oneof=debug release"`
 }
 
 func TestLoad(t *testing.T) {

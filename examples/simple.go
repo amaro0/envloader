@@ -7,14 +7,13 @@ import (
 
 type someConf struct {
 	Port    string `env:"PORT" envDefault:"3002" validate:"numeric"`
-	GinMode string `env:"GIN_MODE" envDefault:"debug" validate:"oneof=debug release`
+	GinMode string `env:"GIN_MODE" envDefault:"debug" validate:"oneof=debug release"`
 }
 
-
-func main(){
+func main() {
 	err, conf := envloader.Load(someConf{})
 
-	if err != nil{
+	if err != nil {
 		panic(err)
 	}
 
